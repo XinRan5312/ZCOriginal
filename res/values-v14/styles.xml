@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- app主题样式 -->
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/default_animation</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppThemeAppCompat" parent="android:Theme.Light.NoTitleBar">
+    </style>
+    
+     <!-- 需要支持右滑关闭页面的Activity都要添加此属性 -->
+    <style name="AppTheme_needBack" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

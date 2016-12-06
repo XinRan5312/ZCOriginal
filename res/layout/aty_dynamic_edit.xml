@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.minjinsuo.zhongchou"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <com.minjinsuo.zhongchou.view.BufferScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="top"
+                android:minHeight="130dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp" >
+
+                <com.minjinsuo.zhongchou.widget.FloatLabeledEditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:maxLength="120"
+                    
+                    app:fletFloatingHint="进展信息："
+                    app:fletTextColor="@color/black_323232" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@color/bg"
+                android:orientation="horizontal" >
+
+                <GridView
+                    android:id="@+id/gv_Pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:background="@color/white"
+                    android:cacheColorHint="@color/transparent"
+                    android:columnWidth="15dp"
+                    android:gravity="center"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="4"
+                    android:padding="15dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.minjinsuo.zhongchou.view.BufferScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView style="@style/view_line" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/Btn_Long"
+            android:text="发布进展" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

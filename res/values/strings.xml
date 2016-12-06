@@ -1,0 +1,79 @@
+<resources>
+
+    <string name="app_name">众筹</string>
+    <!-- tab 文字 -->
+    <string name="tab_home">产品</string>
+    <string name="tab_crowd">股权</string>
+    <string name="tab_account">账户</string>
+    <string name="tab_more">更多</string>
+    <!-- title text -->
+    <string name="home_title">产品众筹</string>
+    <string name="crowd_title">股权众筹</string>
+    <string name="product_detail_title">产品详情</string>
+    <string name="crowd_detail_title">股权详情</string>
+    <string name="my_attention_title">我的关注</string>
+    <string name="my_support_title">我的订单</string>
+    <string name="my_faqi_title">我的发起</string>
+    <!-- volley -->
+    <string name="loading">加载中&#8230;</string>
+    <string name="net_error">网络连接失败，请检查您的网络</string>
+    <string name="net_exception">网络数据异常，请稍后重试</string>
+    <string name="json_exception">json format error</string>
+
+    <string name="image">Image</string>
+
+    <string-array name="data">
+        <item>我是第一行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+        <item>我是第二行数据</item>
+    </string-array>
+
+    <!-- 找回密码界面开始 -->
+    <string name="act_find_pwd_et_tel_num_hint">请输入您认证的手机号码</string>
+
+    <!-- 找回密码界面结束 -->
+    <!-- 找回密码确认信息界面开始 -->
+    <string name="act_pwd_certify_hint">已发送验证码到您绑定的手机号码</string>
+
+    <!-- 找回密码确认信息界面结束 -->
+    <!-- 常驻城市选择界面开始 -->
+    <string name="act_areachoiceprovince_hint">请选择省</string>
+    <string name="act_areachoicecity_hint">请选择省</string>
+    <!-- 常驻城市选择界面结束 -->
+    <!-- UI中的通用String开始 -->
+    <string name="ui_comm_btn_next">下一步</string>
+    <string name="ui_comm_txt_vcode">验证码</string>
+    <string name="ui_comm_txt_newPwd">新密码</string>
+    <string name="ui_comm_txt_confirmPwd">确认密码</string>
+    <string name="ui_comm_txt_complete">完成</string>
+    <string name="ui_comm_et_confirmPwd_hint">请输入确认密码</string>
+    <string name="ui_comm_et_newPwd_hint">请输入新密码</string>
+    <string name="ui_comm_back">返回</string>
+    <!-- UI中的通用String结束 -->
+
+
+    <!-- 领投人认证选择列表标题显示 -->
+    <string name="title_com">公司类型</string>
+    <string name="title_edu">教育背景</string>
+    <string name="title_preference">阶段偏好</string>
+    <string name="title_time">从事投资实业时间</string>
+    <string name="title_hadInvestPrjNum">已投项目数</string>
+    <string name="title_nextPrj">项目已到下轮</string>
+    <string name="title_succExitPrj">成功退出项目</string>
+
+    <!-- 注册输入限制 -->
+    <string name="passworddigits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ#$%^*.~@</string>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_renshu"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/text_s14"
+                android:text="邀请好友人数"
+                android:textColor="@color/black_333333" />
+
+            <TextView
+                android:id="@+id/tv_renshu"
+                style="@style/text_s14"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:text="0人"
+                android:textColor="@color/black_333333" />
+        </RelativeLayout>
+
+        <View style="@style/view_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/text_s14"
+                android:text="邀请奖励" />
+
+            <TextView
+                android:id="@+id/tv_jine"
+                style="@style/txt15red"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/invite_redbag"
+                android:text="0元" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg" >
+
+        <Button
+            android:id="@+id/bt_yaoqing"
+            style="@style/BtnStyleDrawable"
+            android:layout_alignParentBottom="true"
+            android:text="立即邀请" />
+    </RelativeLayout>
+
+</LinearLayout>

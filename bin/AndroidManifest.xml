@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.minjinsuo.zhongchou"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:name="com.minjinsuo.zhongchou.system.ZCApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- SharedSdk分享需要 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <intent-filter>
+                <data android:scheme="tencent1105546445" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 新浪微博客户端分享回调必须配置 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- END SharedSdk分享需要 -->
+
+
+        <!-- tab页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_Main"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 产品详情页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_ProductDetail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 股权详情页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_StockDetail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 我的关注页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_MyAttention"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 我的订单 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_MyOrder"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 我的发起 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_MyFaqi"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 筛选产品 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_ProductSelect"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 项目动态进展 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_ProjectDynamic"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 发起人详情 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_PersonDetail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 支持者列表 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_SupportPerson"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 相关文件列表 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_RelationFiles"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 普通产品 确认订单页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_ProductOrderSub"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 回报选择档 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_SelectTypes"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 订单详情 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_OrderDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 评论列表 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_TopicMain"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 评论回复列表 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_TopicReply"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 登录页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_Login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 引导页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.NavigationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 注册页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_Register"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 忘记密码 填写手机号页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_findPassWord"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 忘记密码 确认信息界面 填写验证码 新密码 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_findPassWordCertify"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 红包列表页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_MyRedBag"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 投资认证页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_InvestCerciticy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 投资人认证页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_InvestCerciticyPer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 投资领域选择页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Avtivity_InvestArea"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 领头人认证页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_InvestCerciticyLingTou"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 应用内公用Webview页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Act_CommonWeb"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 城市选择页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Act_AreaChoiceProVince"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 充值提现页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.TopupAndTiXianActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 实名认证页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.OpenChargeFirstActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 与第三方交互页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_ThirdWeb"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 股权产品填写订单页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_StockOrderSub"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 填写预约信息页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_StockBookSub"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 我的预约列表 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_MyBooked"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 我的预约详情页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_BookedDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 选择城市页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_city"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 新增、修改收货地址页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.ZActivity_receiverAddress"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 收货地址管理页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.ZActivity_addressManager"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 积分页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_integrate"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 积分列表页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_integrateShopMall"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 图片放大预览 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_BigImageView"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 股权详情页的公告详情（样式同项目进展） -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_ProjectNotice"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 测试在线播放视频 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.TestPlayMediaInWebView"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 领投人认证页面——选择列表页（选择公司类型、教育背景等等） -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_SelectListCommon"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 更多——消息列表 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_MsgCommon"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 消息详情 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_MsgDetail"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 编辑项目进展 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_DynamicEdit"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 产品搜索页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_Search"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 邀请好友页面 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_InviteFriends"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 邀请好友_列表 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_InviteFriendList"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 发送私信 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_MsgSend"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 修改登录密码 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_ResetPwd"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 密码管理 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_Pwd_Manage"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 导航页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_Navigation"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 加载页 -->
+        <!--
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_Splash"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        -->
+        <!-- 手势密码验证 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_CheckoutGestureLock"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 手势密码设置 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_SetGestureLock"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 领头人详情页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_LingTouerDetail"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 可用红包 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.Activity_EnableRedBag"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 消息中心（私信收件箱、发件箱、站内信） -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.ZActivity_msgCenter"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 私信详情页 -->
+        <activity
+            android:name="com.minjinsuo.zhongchou.activity.ZActivity_Mail_detail"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+    </application>
+
+</manifest>

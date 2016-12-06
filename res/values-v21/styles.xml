@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="AppThemeAppCompat" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- app主题样式 -->
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/default_animation</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- 需要支持右滑关闭页面的Activity都要添加此属性 -->
+    <style name="AppTheme_needBack" parent="AppThemeAppCompat">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+</resources>

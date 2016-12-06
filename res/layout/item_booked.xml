@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 预约列表 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/text_s16"
+            android:text="预约状态："
+            android:textColor="@color/black_323232" />
+
+        <TextView
+            android:id="@+id/orderStatus"
+            style="@style/text_s16"
+            android:text="预约成功"
+            android:textColor="@color/black_323232" />
+
+        <TextView
+            style="@style/text_s16"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/black_323232" />
+
+        <TextView
+            style="@style/text_s14"
+            android:text="预约人数："
+            android:textColor="@color/gray_969696" />
+
+        <TextView
+            android:id="@+id/preOrderCount"
+            style="@style/text_s18"
+            android:text="108"
+            android:textColor="@color/red" />
+    </LinearLayout>
+    <!-- END 顶部title -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="104dp"
+            android:layout_height="75dp" >
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="104dp"
+                android:layout_height="75dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_item_test" />
+
+            <TextView
+                android:id="@+id/prjBStatus"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/transbg"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="预热中"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="75dp" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/text_s14"
+                android:gravity="center_vertical"
+                android:text="新势力物联网科技"
+                android:textColor="@color/black_323232" />
+
+            <LinearLayout
+                android:id="@+id/ll_yixiang_invest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_s12"
+                    android:layout_below="@+id/dingdanjine"
+                    android:text="意向投资金额："
+                    android:textColor="@color/gray_969696" />
+
+                <TextView
+                    android:id="@+id/purposeAmount"
+                    style="@style/text_s12"
+                    android:layout_below="@+id/dingdanjine"
+                    android:text="1000元"
+                    android:textColor="@color/gray_969696" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_freeze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_yixiang_invest"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_s12"
+                    android:layout_below="@+id/dingdanjine"
+                    android:text="预约冻结金额："
+                    android:textColor="@color/gray_969696" />
+
+                <TextView
+                    android:id="@+id/frozenAmt"
+                    style="@style/text_s12"
+                    android:layout_below="@+id/dingdanjine"
+                    android:text="1000元"
+                    android:textColor="@color/gray_969696" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_freeze"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_s12"
+                    android:layout_below="@+id/dingdanjine"
+                    android:text="优先购买期："
+                    android:textColor="@color/gray_969696" />
+
+                <TextView
+                    android:id="@+id/time_duration"
+                    style="@style/text_s12"
+                    android:layout_below="@+id/dingdanjine"
+                    android:text="2004。12.1~2016.11.3"
+                    android:textColor="@color/gray_969696" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- END 订单布局 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp" >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_btn_left"
+            style="@style/text_s12"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_gray_strokbtn"
+            android:paddingBottom="6dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="6dp"
+            android:text="取消预约"
+            android:textColor="@color/gray_969696" />
+
+        <TextView
+            android:id="@+id/tv_supportNow"
+            style="@style/text_s12"
+            android:background="@drawable/selector_red_strokbtn"
+            android:paddingBottom="6dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="6dp"
+            android:text="优先购买"
+            android:textColor="#FC646A" />
+    </LinearLayout>
+
+</LinearLayout>

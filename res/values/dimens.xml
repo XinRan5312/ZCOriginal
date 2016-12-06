@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">15dp</dimen>
+    <dimen name="activity_vertical_margin">15dp</dimen>
+    <dimen name="thumnail_default_width">100dip</dimen>
+    <dimen name="thumnail_default_height">100dip</dimen>
+    <!-- 产品列表筛选界面Popwindow中item高度 -->
+    <dimen name="pop_item_height">40dip</dimen>
+
+    <!-- 应用内普通列表默认高度 -->
+    <dimen name="item_higth_default">44dp</dimen>
+    <!-- 众筹 -->
+    <!-- 个人信息item高度 -->
+    <dimen name="list_item_height">45dp</dimen>
+    <!-- 个人信息item字体 -->
+    <dimen name="list_item_text_size">16sp</dimen>
+
+</resources>

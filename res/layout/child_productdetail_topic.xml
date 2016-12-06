@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 产品详情——话题布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/rl_topic_goMore"
+        style="@style/LinearLayout_Item"
+        android:gravity="center_vertical"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/product_detail_topic"
+            android:drawablePadding="10dp"
+            android:text="话题"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_topic_num"
+            style="@style/text_s12"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="（0）"
+            android:textColor="@color/gray_969696" />
+
+        <TextView
+            android:id="@+id/tv_more_topic"
+            style="@style/text_s12"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="更多话题"
+            android:textColor="@color/gray_969696" >
+        </TextView>
+    </LinearLayout>
+
+    <com.minjinsuo.zhongchou.view.ListViewForScorllView
+        android:id="@+id/lv_topic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/white"
+        android:dividerHeight="10dp" >
+    </com.minjinsuo.zhongchou.view.ListViewForScorllView>
+
+</LinearLayout>

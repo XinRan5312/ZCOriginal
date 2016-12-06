@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 标题栏和状态栏颜色 -->
+    <color name="colorPrimary">#333092</color>
+    <color name="colorPrimaryDark">#333092</color>
+    <color name="colorAccent">#333092</color>
+    <!-- 涟漪色织 -->
+    <color name="ripplecolor">#9ccc</color>
+
+    <!-- 主色 -->
+    <color name="main_color">#333092</color>
+    <!-- 标题栏背景色 -->
+    <color name="titlebar">#333092</color>
+
+    <drawable name="title_bar">#333092 </drawable>
+    <drawable name="title_bar_pressed">#333080 </drawable>
+    <!-- tab字体颜色 -->
+    <color name="tabTextNomal">#aeaeae</color>
+    <color name="tabTextSelected">#fe4902</color>
+    <!-- 滑动tab字体颜色 -->
+    <color name="SlidingtabTextEnable">#8F8DC3</color>
+    <!-- 通用色 -->
+    <color name="gray3">#a7a7ab</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="transparent">#0000</color>
+    <color name="gray">#d4d6d9</color>
+    <color name="bg">#EEEEEE</color>
+     <color name="bg_pressed">#F7F7F7</color>
+    <color name="blue">#CDF2E5</color>
+    <color name="transbg">#66000000</color>
+    <color name="layout_pressed">#F7F7F7</color>
+    <color name="c_fc6">#FC646A</color>
+    <color name="c_d2">#d2d2d2</color>
+    <!-- 线条颜色 -->
+    <color name="view_line">#e8e7e6</color>
+    <!-- 按钮颜色(粉红色) -->
+    <color name="button_pressed">#DD4D52</color>
+    <color name="button_normal">#FC646A</color>
+    <!-- 可滑动的tabPagerIndicator按下颜色 -->
+    <color name="background_tab_pressed">#F7F7F7</color>
+    <!-- 字体颜色 -->
+    <color name="black_323232">#323232</color>
+    <color name="gray_a7a7ab">#a7a7ab</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_969696">#969696</color>
+    <color name="gray_999999">#999999</color>
+    <color name="red">#FC646A</color>
+    <color name="green">#65C721</color>
+    <color name="gray_line">#DCDCDC</color>
+    <!-- 水平进度条颜色默认颜色 -->
+    <color name="progressbar_init">#EBEBEB</color>
+    <color name="progressbar_had">#A8DE7C</color>
+    <!-- wheelview -->
+    <color name="center_line_border">#CCCCD0</color>
+    <color name="black_333333">#333333</color>
+    <!-- EditText 中提示文字的颜色 -->
+    <color name="hint_color">#cfcfcf</color>
+    <!-- dialog相关 -->
+    <color name="dialog_text">#333092</color>
+    <color name="alertdialog_line">#e6e6e6</color>
+
+</resources>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" >
+    </include>
+
+    <com.minjinsuo.zhongchou.view.BufferScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_noLoginUnShow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- START 顶部头像布局 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_layout"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp" >
+
+                    <com.minjinsuo.zhongchou.view.CircleImageView
+                        android:id="@+id/civ_head"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/head" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp" >
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="账户名"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_isLingTou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/tv_username"
+                            android:background="@drawable/shap_yellow"
+                            android:gravity="center"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="3dp"
+                            android:text="领投人"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_username"
+                            android:layout_marginTop="5dp"
+                            android:text="13528765432"
+                            android:textColor="@color/black_323232"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/arrow_right" />
+                </LinearLayout>
+                <!-- END 顶部头像布局 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bindCard"
+                    style="@style/LinearLayout_Item"
+                    android:layout_marginTop="10dp"
+                    android:padding="16dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/more_bank"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="银行卡"
+                        android:textColor="@color/black_323232"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_isBankBinded"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text="未绑定"
+                        android:textColor="@color/gray_969696"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="#66666666" />
+
+                <LinearLayout
+                    android:id="@+id/ll_pwdSet"
+                    style="@style/LinearLayout_Item"
+                    android:padding="16dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/more_mima"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text="密码管理"
+                        android:textColor="@color/black_323232"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="#66666666" />
+
+                <LinearLayout
+                    android:id="@+id/ll_add_manage"
+                    style="@style/LinearLayout_Item"
+                    android:padding="16dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/more_add"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text="地址管理"
+                        android:textColor="@color/black_323232"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="#66666666" />
+            </LinearLayout>
+            <!-- END 登录后才显示的布局 -->
+            <!-- 关于我们 -->
+
+            <LinearLayout
+                android:id="@+id/ll_aboutUs"
+                style="@style/LinearLayout_Item"
+                android:layout_marginTop="10dp"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@drawable/more_guanyu"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="center_vertical"
+                    android:text="关于民金所"
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="#66666666" />
+
+            <LinearLayout
+                android:id="@+id/ll_helpCenter"
+                style="@style/LinearLayout_Item"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@drawable/more_help"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="center_vertical"
+                    android:text="帮助中心"
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="#66666666" />
+
+            <LinearLayout
+                android:id="@+id/ll_platNotice"
+                style="@style/LinearLayout_Item"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@drawable/more_notice"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="center_vertical"
+                    android:text="公司公告"
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 联系我们 -->
+
+            <LinearLayout
+                android:id="@+id/ll_contactUs"
+                style="@style/LinearLayout_Item"
+                android:layout_marginTop="10dp"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/more_contact"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="联系我们"
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="center_vertical"
+                    android:text="0102548555"
+                    android:textColor="@color/gray_969696"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="#66666666" />
+
+            <LinearLayout
+                android:id="@+id/ll_versionCheck"
+                style="@style/LinearLayout_Item"
+                android:orientation="horizontal"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/more_version"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="当前版本"
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    style="@style/text_s14"
+                    android:layout_width="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray_969696" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_layout"
+                android:text="退出登录"
+                android:textColor="@color/gray_969696"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </com.minjinsuo.zhongchou.view.BufferScrollView>
+
+</LinearLayout>

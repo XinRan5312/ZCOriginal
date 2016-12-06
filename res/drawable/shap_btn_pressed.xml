@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="5dp" />
+
+    <gradient
+        android:centerColor="@color/button_pressed"
+        android:endColor="@color/button_pressed"
+        android:startColor="@color/button_pressed" />
+
+</shape>

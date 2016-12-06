@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <TextView
+        android:id="@+id/tv_reset_loginPwd"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/selector_layout"
+        android:drawableRight="@drawable/arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="修改登录密码"
+        android:textColor="@color/black_323232"
+        android:textSize="14sp" >
+    </TextView>
+
+    <ImageView style="@style/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_layout"
+        android:gravity="center_vertical"
+        android:minHeight="64dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            style="@style/text_s14"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="手势密码"
+            android:textColor="@color/black_323232" />
+
+        <CheckBox
+            android:id="@+id/clock_onoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:button="@drawable/selector_checkbox_switch"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <ImageView style="@style/view_line" />
+
+    <TextView
+        android:id="@+id/tv_gesture_set"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/selector_layout"
+        android:drawableRight="@drawable/arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="修改手势密码"
+        android:textColor="@color/black_323232"
+        android:textSize="14sp"
+        android:visibility="gone" >
+    </TextView>
+
+</LinearLayout>

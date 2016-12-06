@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的账户内容页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/auth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#5757A4"
+        android:gravity="center" >
+
+        <TextView
+            style="@style/text_s12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您还没有实名认证，为不影响您投资 请您"
+            android:textColor="#D76279" />
+
+        <TextView
+            android:id="@+id/authnow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 立即认证》"
+            android:textColor="#D76279"
+            android:textSize="14sp" />
+    </TableRow>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/titlebar" >
+
+        <LinearLayout
+            android:id="@+id/ll_amount_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/text_s14"
+                android:layout_above="@+id/tv_amount_all"
+                android:text="总资产（元）"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_amount_all"
+                style="@style/text_s14"
+                android:layout_marginTop="17dp"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </LinearLayout>
+        <!-- 金额布局 -->
+
+        <CheckBox
+            android:id="@+id/account_eye_check"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/eye_checkbox_bg"
+            android:button="@null"
+            android:checked="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transbg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/text_s14"
+                    android:layout_centerHorizontal="true"
+                    android:text="可用余额（元）"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_avaliable"
+                    style="@style/text_s14"
+                    android:layout_centerHorizontal="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#5B599D" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/text_s14"
+                    android:layout_centerHorizontal="true"
+                    android:text="冻结金额（元）"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_freeze"
+                    style="@style/text_s14"
+                    android:layout_centerHorizontal="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- END 透明金额布局 -->
+    </RelativeLayout>
+
+    <!-- 第二部分 -->
+
+    <LinearLayout
+        android:id="@+id/ll_invest_cirtify"
+        style="@style/LinearLayout_Item"
+        android:layout_marginTop="10dp"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/account_touzirenzheng"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="center_vertical"
+            android:text="投资认证"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_myBook"
+        style="@style/LinearLayout_Item"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/account_yuyue"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="center_vertical"
+            android:text="我的预约"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#66666666" />
+
+    <LinearLayout
+        android:id="@+id/ll_mysupport"
+        style="@style/LinearLayout_Item"
+        android:clickable="true"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/account_dingdan"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="center_vertical"
+            android:text="我的订单"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#66666666" />
+
+    <LinearLayout
+        android:id="@+id/ll_myfaqi"
+        style="@style/LinearLayout_Item"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/account_faqi"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="center_vertical"
+            android:text="我的发起"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#66666666" />
+
+    <LinearLayout
+        android:id="@+id/ll_myattention"
+        style="@style/LinearLayout_Item"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/account_attention"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="center_vertical"
+            android:text="我的关注"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <!-- start 我的红包等第三部分 -->
+
+    <LinearLayout
+        android:id="@+id/layout_companyUserNoShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_myRedBag"
+            style="@style/LinearLayout_Item"
+            android:layout_marginTop="10dp"
+            android:padding="16dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/account_hongbao"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical"
+                android:text="我的红包"
+                android:textColor="@color/black_323232"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#66666666" />
+
+        <LinearLayout
+            android:id="@+id/ll_myInveteFriend"
+            style="@style/LinearLayout_Item"
+            android:padding="16dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/account_invite"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical"
+                android:text="我的邀请"
+                android:textColor="@color/black_323232"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#66666666" />
+
+        <LinearLayout
+            android:id="@+id/ll_integral"
+            style="@style/LinearLayout_Item"
+            android:padding="16dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/account_jifen"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical"
+                android:text="我的积分"
+                android:textColor="@color/black_323232"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- start 充值 -->
+
+    <LinearLayout
+        android:id="@+id/btn_saveMoney"
+        style="@style/LinearLayout_Item"
+        android:layout_marginTop="10dp"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/account_chongzhi"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="center_vertical"
+            android:text="充值"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#66666666" />
+
+    <LinearLayout
+        android:id="@+id/btn_withdrawMoney"
+        style="@style/LinearLayout_Item"
+        android:layout_marginBottom="20dp"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/account_tixian"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="center_vertical"
+            android:text="提现"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

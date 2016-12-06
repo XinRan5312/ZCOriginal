@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin" >
+
+    <TextView
+        android:id="@+id/tv_amount"
+        style="@style/text_s16"
+        android:layout_marginTop="8dp"
+        android:text="无私奉献"
+        android:textColor="@color/black_323232"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_des"
+        style="@style/text_s14"
+        android:layout_marginTop="11dp"
+        android:singleLine="false"
+        android:text="不需要给回报，选择此项，项目成功后发起人将不会给您发送回报。"
+        android:textColor="@color/black_323232" />
+
+    <!-- 可以存放多张图片 -->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_select_type_1"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/test_order" />
+
+        <ImageView
+            android:id="@+id/iv_select_type_2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/test_order" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/view_line"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/text_s16"
+            android:text="已支持数："
+            android:textColor="@color/black_323232" />
+
+        <TextView
+            android:id="@+id/tv_supportedNum"
+            style="@style/text_s16"
+            android:text="156"
+            android:textColor="#FD4D4D" />
+
+        <TextView
+            style="@style/text_s16"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="#FD4D4D" />
+
+        <Button
+            android:id="@+id/btn_invest"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/selector_btn"
+            android:minWidth="80dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="立即支持"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

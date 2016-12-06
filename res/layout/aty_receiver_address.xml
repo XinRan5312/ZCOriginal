@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical" >
+
+        <include layout="@layout/title_bar" />
+
+        <LinearLayout
+            android:id="@+id/ll_choseCity"
+            style="@style/personal_Item_LinearLayout"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                style="@style/personal_Item_LeftText"
+                android:text="所在地区：" />
+
+            <!-- <TableRow
+                android:id="@+id/trEar01"
+                style="@style/rowStyle"
+                android:layout_marginRight="0dp" > -->
+
+                <TextView
+                    android:id="@+id/tvEar01"
+                    style="@style/personaldata_editText"
+                    android:drawableRight="@drawable/icon_arrow_next_gray"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="请选择" />
+         <!--    </TableRow> -->
+        </LinearLayout>
+
+        <LinearLayout style="@style/personal_Item_LinearLayout" >
+
+            <TextView
+                style="@style/personal_Item_LeftText"
+                android:text="详细地址：" />
+
+            <EditText
+                android:id="@+id/etNowAddress"
+                style="@style/personaldata_editText"
+                android:ellipsize="end"
+                android:hint="请输入"
+                android:maxLength="50"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/personal_Item_LinearLayout"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                style="@style/personal_Item_LeftText"
+                android:text="收  货  人：" />
+
+            <EditText
+                android:id="@+id/et_receiver"
+                style="@style/personaldata_editText"
+                android:hint="请输入"
+                android:maxLength="25"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/personal_Item_LinearLayout" >
+
+            <TextView
+                style="@style/personal_Item_LeftText"
+                android:text="手机号码：" />
+
+            <EditText
+                android:id="@+id/et_phoneNumber"
+                style="@style/personaldata_editText"
+                android:hint="请输入"
+                android:inputType="number"
+                android:maxLength="11" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/Btn_Long"
+            android:layout_marginTop="75dp"
+            android:text="保存" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,244 @@
+<!-- 发起人详情 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.minjinsuo.zhongchou.view.ObservableScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="20dp" >
+
+                <LinearLayout
+                    android:id="@+id/ll_top_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <com.minjinsuo.zhongchou.view.CircleImageView
+                        android:id="@+id/clv_head"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/head" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            style="@style/text_s18"
+                            android:layout_gravity="center_vertical"
+                            android:text="--"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/iv_lingtouren"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/person_detail_lingtouren" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_des"
+                        style="@style/text_s12"
+                        android:layout_marginLeft="36dp"
+                        android:layout_marginRight="36dp"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="false"
+                        android:text="--"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/selector_btn"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp"
+                        android:paddingTop="8dp" >
+
+                        <TextView
+                            android:id="@+id/tv_btn_sixin"
+                            style="@style/text_s18"
+                            android:drawableLeft="@drawable/icon_mail"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="私信"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_btn_des"
+                            style="@style/text_s18"
+                            android:drawablePadding="10dp"
+                            android:text="申请领投"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- END 顶部布局+私信 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <!-- 筛选条件布局 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_select_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/white"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_project_left"
+                                style="@style/text_s16"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="发起的项目"
+                                android:textColor="@drawable/selector_sliding_text" />
+
+                            <ImageView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/view_line" />
+
+                            <TextView
+                                android:id="@+id/tv_project_right"
+                                style="@style/text_s16"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="关注的项目"
+                                android:textColor="@drawable/selector_sliding_text" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/view_line" />
+                    </LinearLayout>
+                    <!-- END 筛选条件布局 -->
+
+                    <com.minjinsuo.zhongchou.view.ListViewForScorllView
+                        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/lv_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/bg"
+                        android:cacheColorHint="@color/transparent"
+                        android:divider="@color/bg"
+                        android:dividerHeight="10dp" >
+                    </com.minjinsuo.zhongchou.view.ListViewForScorllView>
+                </LinearLayout>
+                <!-- END tab切换功能 -->
+            </LinearLayout>
+        </com.minjinsuo.zhongchou.view.ObservableScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 标题栏，放在顶部则被ScrollView布局覆盖 -->
+
+            <include layout="@layout/title_bar" />
+
+            <LinearLayout
+                android:id="@+id/ll_select_area_hide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_project_left2"
+                        style="@style/text_s16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="发起的项目"
+                        android:textColor="@drawable/selector_sliding_text" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/view_line" />
+
+                    <TextView
+                        android:id="@+id/tv_project_right2"
+                        style="@style/text_s16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="关注的项目"
+                        android:textColor="@drawable/selector_sliding_text" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_line" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

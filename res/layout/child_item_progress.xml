@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_child_progress_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/text_s12"
+            android:layout_width="210dp"
+            android:background="#F8F8F8"
+            android:layout_height="65dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="3"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:text="测Android 横向列表Gr试AGr试AndroidAndroid 横向Gr试AndroidAndroid 横向ndroidAndroid 横向Gr试AndroidAndroid 横向Gr试AndroidAndroid 横向列表Gr 横向列,表GrAndroid 横向列表Gr。Android 横向列表Gr。"
+            android:textColor="@color/black_323232" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_line_left"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#FFEFEF" />
+
+            <TextView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_corner" />
+
+            <ImageView
+                android:id="@+id/iv_line_right"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#FFEFEF" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/text_s12"
+            android:text="今天"
+            android:textColor="@color/red"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>

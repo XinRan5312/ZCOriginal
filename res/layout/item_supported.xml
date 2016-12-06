@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/support_gongyi"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/type_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_color_myorder"
+            android:gravity="center"
+            android:minHeight="25dp"
+            android:minWidth="50dp"
+            android:text="科技"
+            android:textColor="@color/gray_969696"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_s16"
+            android:layout_marginLeft="10dp"
+            android:text="关注留守儿童，六一圆梦活动"
+            android:textColor="@color/black_323232" />
+    </LinearLayout>
+    <!-- END 顶部title -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="104dp"
+            android:layout_height="75dp" >
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="104dp"
+                android:layout_height="75dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_item_test" />
+
+            <TextView
+                android:id="@+id/prjStatus"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/transbg"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="预热中"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/dingdanjine"
+                style="@style/text_s14"
+                android:gravity="center_vertical"
+                android:text="订单金额："
+                android:textColor="@color/black_323232" />
+
+            <TextView
+                android:id="@+id/amount"
+                style="@style/text_s16"
+                android:layout_toRightOf="@+id/dingdanjine"
+                android:gravity="center_vertical"
+                android:text="￥188"
+                android:textColor="#FF4E4E" />
+
+            <TextView
+                android:id="@+id/tv_orderNo"
+                style="@style/text_s12"
+                android:layout_below="@+id/dingdanjine"
+                android:layout_marginTop="18dp"
+                android:text="订单编号：08500870078918"
+                android:textColor="@color/gray_969696" />
+
+            <TextView
+                android:id="@+id/tv_order_status"
+                style="@style/text_s12"
+                android:layout_below="@+id/tv_orderNo"
+                android:layout_marginTop="8dp"
+                android:text="交易状态：支付中"
+                android:textColor="@color/gray_969696" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- END 订单布局 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_left"
+            style="@style/text_s12"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_supportNow"
+            android:background="@drawable/selector_gray_strokbtn"
+            android:paddingBottom="6dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="6dp"
+            android:text="取消项目"
+            android:textColor="@color/gray_969696" />
+
+        <TextView
+            android:id="@+id/btn_right"
+            style="@style/text_s12"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_red_strokbtn"
+            android:paddingBottom="6dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="6dp"
+            android:text="立即支持"
+            android:textColor="#FC646A" />
+    </LinearLayout>
+
+</LinearLayout>

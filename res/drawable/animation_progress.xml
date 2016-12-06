@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/pb_foxtail_large_1"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_2"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_3"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_4"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_5"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_6"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_7"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_8"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_9"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_10"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_11"
+        android:duration="66"/>
+    <item
+        android:drawable="@drawable/pb_foxtail_large_12"
+        android:duration="66"/>
+
+</animation-list>

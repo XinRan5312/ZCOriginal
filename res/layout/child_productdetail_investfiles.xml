@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 产品详情的子布局——支持人员/投资文件 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_relation_files"
+        style="@style/LinearLayout_Item"
+        android:gravity="center_vertical"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/crowd_detail_investfiles"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="投资文件"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_num_files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="（0）"
+            android:textColor="@color/gray_969696"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/right_files_arrow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/gray_969696"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_contains_investfiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 股权详情的子布局——项目进展 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_project_progres"
+        style="@style/LinearLayout_Item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp" >
+
+        <TextView
+            android:id="@+id/tv_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/stock_detail_progress"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="项目进展"
+            android:textColor="@color/black_323232"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_progress_num"
+            style="@style/text_s12"
+            android:layout_width="wrap_content"
+            android:text="（0）"
+            android:textColor="@color/gray_969696" />
+
+        <TextView
+            android:id="@+id/right_progress"
+            style="@style/text_s14"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="right"
+            android:textColor="@color/gray_969696" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_contains"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

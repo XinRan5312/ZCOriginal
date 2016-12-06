@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 产品详情、股权详情——支持人员 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_child_person_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingBottom="15dp"
+    android:paddingRight="5dp" >
+
+    <RelativeLayout
+        android:layout_width="56dp"
+        android:layout_height="62dp" >
+
+        <com.minjinsuo.zhongchou.view.CircleImageView
+            android:id="@+id/circleIv"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/head"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_diadema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/investlogu"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/text_s12"
+        android:layout_marginTop="5dp"
+        android:text="点击申请"
+        android:textColor="@color/gray_969696" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="libs/volley.jar"/>
+	<classpathentry kind="lib" path="libs/MobCommons-2016.0707.1708.jar"/>
+	<classpathentry kind="lib" path="libs/MobTools-2016.0707.1708.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-Core-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-Email-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-QQ-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-QZone-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-ShortMessage-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-SinaWeibo-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-Wechat-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-Wechat-Core-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-Wechat-Favorite-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/ShareSDK-Wechat-Moments-2.7.4.jar"/>
+	<classpathentry kind="lib" path="libs/GetuiExt-2.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/GetuiSDK2.8.1.0.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

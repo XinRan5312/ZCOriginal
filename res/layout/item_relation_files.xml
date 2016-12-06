@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayout_Item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:src="@drawable/icon_files" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/text_s14"
+        android:layout_marginTop="10dp"
+        android:text="相关文件"
+        android:textColor="@color/black_323232" />
+
+</LinearLayout>

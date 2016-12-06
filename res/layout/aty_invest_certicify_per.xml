@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 普通投资人认证 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <com.minjinsuo.zhongchou.view.BufferScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_username"
+                    android:layout_marginTop="5dp"
+                    android:text="上传照片："
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+
+                <com.minjinsuo.zhongchou.view.CircleImageView
+                    android:id="@+id/cir_head"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/head" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/arrow_right" />
+            </LinearLayout>
+            <!-- END 顶部头像 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/text_s14"
+                    android:text="项目名称："
+                    android:textColor="@color/black_323232" />
+
+                <com.minjinsuo.zhongchou.widget.ClearableEditText
+                    android:id="@+id/name_prj"
+                    style="@style/text_s14"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入项目名称"
+                    android:maxLength="30"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/view_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="16dp" >
+
+                <TextView
+                    style="@style/text_s14"
+                    android:text="真实姓名："
+                    android:textColor="@color/black_323232" />
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/text_s14"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:hint="请输入姓名"
+                    android:maxLength="30"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/gray_969696" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/view_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="16dp" >
+
+                <TextView
+                    style="@style/text_s14"
+                    android:text="身份证号："
+                    android:textColor="@color/black_323232" />
+
+                <TextView
+                    android:id="@+id/idNo"
+                    style="@style/text_s14"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="1234567890xX"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:hint="请输入身份证号"
+                    android:maxLength="18"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/gray_969696" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/view_line" />
+            <!-- END 身份证号 -->
+
+            <LinearLayout
+                android:id="@+id/invest_area"
+                style="@style/LinearLayout_Item"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="投资领域："
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_investArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/gray_969696"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/view_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_certicify_zige"
+                style="@style/LinearLayout_Item"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="认证资格："
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_certicify_zige"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/gray_969696"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/view_line" />
+            <!-- END 认证资格 -->
+
+            <LinearLayout
+                android:id="@+id/ll_ziliao"
+                style="@style/LinearLayout_Item"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="上传认证资料："
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_uploadCertify"
+                    android:layout_width="78dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/shapstrok_gray_radussmall"
+                    android:gravity="center"
+                    android:text="上传"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/view_line" />
+
+            <LinearLayout
+                style="@style/LinearLayout_Item"
+                android:padding="16dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="自我介绍："
+                    android:textColor="@color/black_323232"
+                    android:textSize="14sp" />
+
+                <com.minjinsuo.zhongchou.widget.ClearableEditText
+                    android:id="@+id/produceSelf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.minjinsuo.zhongchou.view.BufferScrollView>
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/Btn_Long"
+        android:text="提交认证" />
+
+</LinearLayout>
